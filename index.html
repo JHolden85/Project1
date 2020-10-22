@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
     
     <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +10,8 @@
     <title>New York Times Search</title>
        
     <!-- import the webpage's stylesheet -->
-    <link rel = 'stylesheet' href = './bootstrap.css'>
-    <link rel="stylesheet" href="./style.css">
+    <link rel = 'stylesheet' href = './styles/bootstrap.css'>
+    <link rel="stylesheet" href="./styles/style.css">
     
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
@@ -30,34 +23,31 @@
     <div class="jumbotron" style="background-color: #20315A ; color: white;">
       <h1 class="text-center">
         <strong>
-          <i class="fa fa-newspaper-o"></i> NYT Search</strong>
+          <i class="fa fa-newspaper-o"></i> Brew York Times Search</strong>
       </h1>
     </div>      
   
     
   
     <div class="form-group">
-      <label for="searchTerm">Search Term</label>
-      <textarea class = "form-control" id = "searchTerm" rows = "1"></textarea>
-      <label for="recordsNumber">Number of Records to Retrieve</label>
-      <textarea class = "form-control" id = "recordsNumber" rows="1"></textarea>
-      <label for="startYear">Start Year (Optional)</label>
-      <textarea class = "form-control" id = "startYear" rows="1"></textarea>
-      <label for="endYear">End Year (Optional)</label>
-      <textarea class="form-control" id="endYear" rows="1"></textarea>
+      <label for="name">Brewery Name</label>
+      <textarea class = "form-control" id = "name" rows = "1"></textarea>
+      <label for="city">Brewery City</label>
+      <textarea class = "form-control" id = "city" rows="1"></textarea>
+      <label for="state">Brewery State</label>
+      <textarea class = "form-control" id = "state" rows="1"></textarea>
+      <label for="zip">Brewery Zip Code</label>
+      <textarea class="form-control" id="zip" rows="1"></textarea>
     </div>
     <button type="submit" class="btn btn-primary" id="runSearch">SEARCH</button>
      <br>
      <br>
-     <div id = "topArticles">
+     <div id = "results">
        RESULTS HERE<br>
      </div>
     
-   <script src= "./jquery-3.5.1.min.js"></script>
-   <script src = './script.js'></script>
-   
-    
-
+   <script src= "./scripts/jquery-3.5.1.min.js"></script>
+   <script src = './scripts/script.js'></script>
  
     </div>
 </body>
