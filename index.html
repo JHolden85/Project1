@@ -1,67 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>New York Times Search</title>
-       
-    <!-- import the webpage's stylesheet -->
-    <link rel = 'stylesheet' href = './bootstrap.css'>
-    <link rel="stylesheet" href="./style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
-  <body>
-   <div class = "container">
-    
-    <!-- Jumbotron for Title -->
-    <div class="jumbotron" style="background-color: #20315A ; color: white;">
-      <h1 class="text-center">
-        <strong>
-          <i class="fa fa-newspaper-o"></i> NYT Search</strong>
-      </h1>
-    </div>      
-  
-    
-  
-    <div class="form-group">
-      <label for="searchTerm">Search Term</label>
-      <textarea class = "form-control" id = "searchTerm" rows = "1"></textarea>
-      <label for="recordsNumber">Number of Records to Retrieve</label>
-      <textarea class = "form-control" id = "recordsNumber" rows="1"></textarea>
-      <label for="startYear">Start Year (Optional)</label>
-      <textarea class = "form-control" id = "startYear" rows="1"></textarea>
-      <label for="endYear">End Year (Optional)</label>
-      <textarea class="form-control" id="endYear" rows="1"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary" id="runSearch">SEARCH</button>
-     <br>
-     <br>
-     <div id = "topArticles">
-       RESULTS HERE<br>
-     </div>
-    
-   <script src= "./jquery-3.5.1.min.js"></script>
-   <script src = './script.js'></script>
-   
-    
+		<title>New York Times Search</title>
 
- 
-    </div>
-</body>
-</html>
+		<!-- import the webpage's stylesheet -->
+		<link rel="stylesheet" href="./bootstrap.css" />
+		<link rel="stylesheet" href="./style.css" />
 
-</body>
+		<!-- import the webpage's javascript file -->
+		<script src="/script.js" defer></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<!-- Jumbotron for Title -->
+			<div class="jumbotron" style="background-color: #20315a; color: white">
+				<h1 class="text-center">
+					<strong> <i class="fa fa-newspaper-o"></i> NYT Search</strong>
+				</h1>
+			</div>
+
+			<div class="form-group">
+				<label for="searchTerm">Search Term</label>
+				<textarea class="form-control" id="searchTerm" rows="1"></textarea>
+				<label for="recordsNumber">Number of Records to Retrieve</label>
+				<textarea class="form-control" id="recordsNumber" rows="1"></textarea>
+				<label for="startYear">Start Year (Optional)</label>
+				<textarea class="form-control" id="startYear" rows="1"></textarea>
+				<label for="endYear">End Year (Optional)</label>
+				<textarea class="form-control" id="endYear" rows="1"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary" id="runSearch">
+				SEARCH
+			</button>
+			<br />
+			<br />
+			<div id="topArticles">RESULTS HERE<br /></div>
+
+			<script src="./jquery-3.5.1.min.js"></script>
+			<script src="./script.js"></script>
+		</div>
+	</body>
 </html>
