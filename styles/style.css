@@ -1,0 +1,19 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+  }
+  
+  h1 {
+    font-style: italic;
+    color: #373fff;
+  }
+  
+  .form-control{
+    
+    width: 400px;
+    display: block;
+  }
+  
+  #topArticles{
+    border: 1px solid black;
+  }
