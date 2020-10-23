@@ -27,7 +27,7 @@ console.log("Value of Name parameter entered by User: " + nameEntered);
   .val();
   console.log("Value of state parameter entered by User: " + stateEntered);
 
-   var zipEntered =   queryParams.by_postal = $("#zipcode")
+   var zipEntered =   queryParams.by_postal = $("#zip")
   .val();
   console.log("Value of zip code parameter entered by User: " + zipEntered); 
 
@@ -44,7 +44,7 @@ if (stateEntered > "") {
 }
 
 if (zipEntered > "") {
-  queryParams.by_postal = $("#zipcode")
+  queryParams.by_postal = $("#zip")
   .val()
   .trim();
 }
