@@ -12,11 +12,11 @@ function buildQueryURL() {
   // var queryParams = { "api-key": "R1a31F4tBjCUaM2ho8GtIFsrSdtXt30M" };
   var queryParams = {};
 
-  // Text the user typed into the City search input, add to the queryParams object
-  queryParams.by_city = $("#search-term")
-    .val()
-    .trim();
-
+  var cityEntered = $("#city").val();
+if (cityEntered) {
+  queryParams.by_city = cityEntered;
+}
+console.log("Value of Name parameter entered by User: " + cityEntered);
 // These search parameters are optional and should only be appended to the search string if the user 
 // has entered something on the screen 
 var nameEntered =  queryParams.by_name = $("#pubname")
@@ -133,7 +133,7 @@ function clear() {
 // ==========================================================
 
 // .on("click") function associated with the Search Button
-$("#run-search").on("click", function(event) {
+$("#runSearch").on("click", function(event) {
   // This line allows us to take advantage of the HTML "submit" property
   // This way we can hit enter on the keyboard and it registers the search
 
