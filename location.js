@@ -26,20 +26,11 @@ var options = {
   // latitude and longitude to call the TOM TOM routing API 
   function buildRouteQueryURL() {
     // queryURL is the url we'll use to query the API     Note: Linebreaks are designated by "\".
-    var queryURL = "https://api.tomtom.com/routing/1/calculateRoute/\
-    52.50931,13.42936:52.50274,13.43872/json?\
-    instructionsType=text&language=en-US\
-    &vehicleHeading=90&sectionType=traffic\
-    &report=effectiveSettings&routeType=eco\
-    &traffic=true&avoid=unpavedRoads\
-    &travelMode=car&vehicleMaxSpeed=120\
-    &vehicleCommercial=false&vehicleEngineType=combustion\
-    &key=Your_API_Key:";
-  
+    var queryURL = 
     // Begin building an object to contain our API call's query parameters
     // Set the API key - most API's require a key or authentication - not the openbrewery so leaving 
-    // the API Key defintiion statment here for the key below is for TOM TOM Mapping
-      var queryParams = { "api-key": "gwknIY6FXJpNu1iU9IuT1DcAvLLMzXVE" };
+    // the API Key defintiion statment here for the key below is for Google mapping API's
+      var queryParams = { "api-key": "AIzaSyAiuKrpR8WV9-AFZ4rb_BF8nW4cwc4RQxk" };
     
   
     var cityEntered = $("#city").val();
