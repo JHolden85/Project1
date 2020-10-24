@@ -94,7 +94,7 @@ function updatePage(apiResult) {
           "<strong> " +
           brewName +
           "</strong>"
-      ); 
+      );      
 
     // Build the brewery address and append to document if exists
     var brewAddress = "Address: "  + " " + brewData[i].street + " " + brewData[i].city+ ", " + brewData[i].state + " " + brewData[i].postal_code; 
