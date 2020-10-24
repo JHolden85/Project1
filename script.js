@@ -156,4 +156,4 @@ $("#runSearch").on("click", function(event) {
 
 
 //  .on("click") function associated with the clear button
-$("#clear-all").on("click", clear);
+$("#clear").on("click", clear);
