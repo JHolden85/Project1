@@ -120,6 +120,29 @@ function updatePage(apiResult) {
     $breweryList.append($breweryListItem);
 
   };
+    const divCheckBox = document.createElement("div");
+    divCheckBox.classList.add("field");
+
+    const checkBoxInput = document.createElement("input");
+    checkBoxInput.classList.add("switch", "is-rtl", "is-outlined");
+    checkBoxInput.setAttribute("id", "toggle" + i + response.data[i].city);
+    checkBoxInput.setAttribute("name", "toggle");
+    checkBoxInput.setAttribute("type", "checkbox");
+    checkBoxInput.setAttribute("value", "")
+    checkBoxInput.setAttribute("data-city", locationIndex);
+    checkBoxInput.setAttribute("data-latlong", latLongString);
+    // console.log(checkBoxInput.getAttribute("data-latlong"));
+
+    const checkBoxLabel = document.createElement("label");
+    checkBoxLabel.setAttribute("for", "toggle" + i + response.data[i].city);
+    checkBoxLabel.innerHTML = "";
+
+    divCheckBox.append(checkBoxInput);
+    divCheckBox.append(checkBoxLabel);
+    newDiv.append(divCheckBox);
+
+
+
 
   };
 
