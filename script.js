@@ -19,7 +19,7 @@ if (cityEntered) {
 console.log("Value of Name parameter entered by User: " + cityEntered);
 // These search parameters are optional and should only be appended to the search string if the user 
 // has entered something on the screen 
-var nameEntered =  queryParams.by_name = $("#pubname")
+var nameEntered =  queryParams.by_name = $("#name")
 .val();
 console.log("Value of Name parameter entered by User: " + nameEntered);
 
@@ -32,7 +32,7 @@ console.log("Value of Name parameter entered by User: " + nameEntered);
   console.log("Value of zip code parameter entered by User: " + zipEntered); 
 
 if (nameEntered > "") {
-  queryParams.by_name = $("#pubname")
+  queryParams.by_name = $("#name")
   .val()
   .trim();
 }
@@ -94,7 +94,7 @@ function updatePage(apiResult) {
           "<strong> " +
           brewName +
           "</strong>"
-      ); 
+      );      
 
     // Build the brewery address and append to document if exists
     var brewAddress = "Address: "  + " " + brewData[i].street + " " + brewData[i].city+ ", " + brewData[i].state + " " + brewData[i].postal_code; 
@@ -126,7 +126,7 @@ function updatePage(apiResult) {
 
 // Function to empty out the list of breweries
 function clear() {
-  $("#article-section").empty();
+  $("#brewery-section").empty();
 };
 
 // CLICK HANDLERS
@@ -156,4 +156,4 @@ $("#runSearch").on("click", function(event) {
 
 
 //  .on("click") function associated with the clear button
-$("#clear-all").on("click", clear);
+$("#clear").on("click", clear);
