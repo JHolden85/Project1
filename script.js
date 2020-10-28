@@ -116,6 +116,20 @@ function updatePage(apiResult) {
     $breweryListItem.attr("data-longitude", brewData[i].longitude); 
     $breweryListItem.attr("data-latitude", brewData[i].latitude); 
 
+<iframe
+  width="650"
+  height="550"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBvRNEy-wXZQZ26S-LlF4vtSPaEP6W5d4w&q=
+  belching+brewing,Oceanside+California" allowfullscreen>
+</iframe>
+
+var mapAPI =
+      "https://www.google.com/maps/embed/v1/search?key=AIzaSyBvRNEy-wXZQZ26S-LlF4vtSPaEP6W5d4w&q=" +
+      brewName.replace(" ", "+");
+
+
+
     // Append the article
     $breweryList.append($breweryListItem);
 
@@ -180,3 +194,4 @@ $("#runSearch").on("click", function(event) {
 
 //  .on("click") function associated with the clear button
 $("#clear").on("click", clear);
+
