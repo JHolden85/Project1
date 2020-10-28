@@ -139,10 +139,24 @@ function updatePage(apiResult) {
 
     // Append and log url
     $breweryListItem.append("<a href='" +  brewData[i].website_url + "'>" + brewData[i].website_url + "</a>");
+
+    // Map API
+
+    var mapAPI = "https://www.google.com/maps/embed/v1/search?key=AIzaSyBvRNEy-wXZQZ26S-LlF4vtSPaEP6W5d4w&q=" + brewName.replace(" ", "+"); 
+    // + 
+    // "," + brewData[i].city + "," + brewData[i].state;
+
+    $breweryListItem.append(`<iframe src=${mapAPI}/></iframe>`)
+
+    console.log(mapAPI)
  
     // Adding a data-attribute
     $breweryListItem.attr("data-longitude", brewData[i].longitude); 
     $breweryListItem.attr("data-latitude", brewData[i].latitude); 
+
+   
+
+
 
     // Append the article
     $breweryList.append($breweryListItem);
