@@ -1,3 +1,10 @@
+var lastSearch = {
+	Name: "",
+	City: "",
+	State: "",
+	Zip: "",
+};
+
 /**
  * pulls information from the form and build the query URL
  * @returns {string} URL for the brewery API based on user search parameters
@@ -39,6 +46,13 @@ function buildQueryURL() {
 	if (zipEntered > "") {
 		queryParams.by_postal = $("#zip").val().trim();
 	}
+
+	lastSearch.Name = nameEntered;
+	lastSearch.City = cityEntered;
+	lastSearch.State = stateEntered;
+	lastSearch.Zip = zipEntered;
+	localStorage.setItem("lastSearch", JSON.stringify(lastSearch));
+	console.log(lastSearch);
 
 	// Logging the URL so we have access to it for troubleshooting
 	console.log("---------------\nURL: " + queryURL + "\n---------------");
