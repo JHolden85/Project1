@@ -1,3 +1,21 @@
+
+var lastSearch = JSON.parse(localStorage.getItem("lastSearch")) || {
+  name: "",
+  city: "",
+  state: "",
+  zip: "",
+};
+
+var tempStore;
+
+putStuffOnPage();
+
+function putStuffOnPage(){
+  Object.entries(lastSearch).forEach(pair => {
+    $(`#${pair[0]}`).val(pair[1]);
+  })
+}
+
 /**
  * pulls information from the form and build the query URL
  * @returns {string} URL for the brewery API based on user search parameters
@@ -48,6 +66,16 @@ if (zipEntered > "") {
   .val()
   .trim();
 }
+
+lastSearch.name = nameEntered;
+	lastSearch.city = cityEntered;
+	lastSearch.state = stateEntered;
+  lastSearch.zip = zipEntered;
+	localStorage.setItem("lastSearch", JSON.stringify(lastSearch));
+	console.log(lastSearch);
+
+
+
 
   // Logging the URL so we have access to it for troubleshooting
   console.log("---------------\nURL: " + queryURL + "\n---------------");
@@ -173,10 +201,27 @@ $("#runSearch").on("click", function(event) {
 $("#clear").on("click", clear);
 
 
-/* <iframe
-width="650"
-height="550"
-frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBvRNEy-wXZQZ26S-LlF4vtSPaEP6W5d4w&q=" + brewName + "," + brewData[i].city + "," + brewData[i].state allowfullscreen>
-</iframe> */
+// CODE TO BE MODIFIED
 
+
+/*if (localStorage.getItem("lastSearch")){
+   lastSearch = localStorage.getItem("lastSearch");
+}else{
+   
+    
+    
+   };
+   lastSearch.name = nameEntered;
+   lastSearch.city = cityEntered;
+   lastSearch.state = stateEntered;
+   lastSearch.zip = zipEntered;   
+  };
+            
+            
+            localStorage.setItem("lastSearch", lastSearch); */
+            tempStore = JSON.parse(localStorage.getItem("lastSearch"));
+            var savedSearch = JSON.parse(localStorage.getItem("lastSearch"));
+            
+            console.log(tempStore + '' + savedSearch);
+
+          //comment  
